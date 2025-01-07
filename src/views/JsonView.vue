@@ -30,7 +30,7 @@ function jsonFormat() {
 <template>
 
   <el-row>
-    <p>缩进位数</p>
+    <p>indent space(缩进位数)</p>
       <el-select
       v-model="selectedValue"
       placeholder="2"

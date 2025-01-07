@@ -16,13 +16,13 @@
         </el-menu-item>
 
         <el-menu-item index="1">
-            <RouterLink to="/json">JSON 格式化</RouterLink>
+            <RouterLink to="/json">JSON Format(格式化)</RouterLink>
         </el-menu-item>
         <el-menu-item index="4">
-            <RouterLink to="/UrlTransform">Url编码/解码</RouterLink>
+            <RouterLink to="/UrlTransform">Url Encode/De(编码/解码)</RouterLink>
         </el-menu-item>
         <el-menu-item index="5">
-            <RouterLink to="/CharacterRemove">移除多余字符</RouterLink>
+            <RouterLink to="/CharacterRemove">Remove characters(移除多余字符)</RouterLink>
         </el-menu-item>
         <el-menu-item index="3">
             <RouterLink to="/about">About</RouterLink>

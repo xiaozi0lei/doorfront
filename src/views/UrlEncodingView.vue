@@ -44,7 +44,7 @@ function UrlTransform() {
 <template>
 
   <el-row>
-    <p>请选择编码/解码</p>
+    <p>Please select(请选择编码/解码)</p>
       <el-select
       v-model="selectedValue"
       placeholder="UrlEncode"
@@ -78,6 +78,6 @@ function UrlTransform() {
     </el-col>
   </el-row>
   <el-row>
-    <el-button type="primary" @click="UrlTransform">转换</el-button>
+    <el-button type="primary" @click="UrlTransform">Transform(转换)</el-button>
   </el-row> 
 </template>

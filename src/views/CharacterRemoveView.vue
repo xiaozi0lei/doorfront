@@ -1,26 +1,28 @@
 <script setup lang="ts">
 import { ref } from "vue";
 
-var textarea = ref("");
+const textarea = ref("");
 
 const selectedValue = ref(0);
 selectedValue.value = 0;
 const options = [
     {
         value: 0,
-        label: "前后空格",
+        label: "front-end space(前后空格)",
     },
     {
         value: 1,
-        label: "所有空格",
+        label: "all space(所有空格)",
     },
     {
         value: 2,
         label: "\\t",
     },
 ];
-function RemoveCharacter(character: String) {
-    textarea.value = textarea.value.replaceAll(character, "").trim();
+function RemoveCharacter(character = "") {
+    textarea.value = textarea.value
+        .replace(new RegExp(character, "gi"), "")
+        .trim();
 }
 
 function CharacterRemove() {
@@ -38,10 +40,10 @@ function CharacterRemove() {
 
 <template>
     <el-row>
-        <p>请选择移除的字符</p>
+        <p>Please select(请选择移除的字符)</p>
         <el-select
             v-model="selectedValue"
-            placeholder="前后空格"
+            placeholder="front-end space(前后空格)"
             size="large"
             style="width: 240px"
         >
@@ -72,6 +74,6 @@ function CharacterRemove() {
         </el-col>
     </el-row>
     <el-row>
-        <el-button type="primary" @click="CharacterRemove">移除</el-button>
+        <el-button type="primary" @click="CharacterRemove">Remove Space(移除空格)</el-button>
     </el-row>
 </template>
